@@ -25,8 +25,10 @@ import numpy as np
 np.random.seed(42)
 data = pd.DataFrame(np.random.rand(100), columns=['Random Numbers'])
 
-def preview_data(df):
-    print(df.head())
+def preview_data_revised(df):
+    head = df.head()
+    description = df.describe()
+    return [head, description]
 
-preview_data(data)
+result = preview_data_revised(data)
 ```
